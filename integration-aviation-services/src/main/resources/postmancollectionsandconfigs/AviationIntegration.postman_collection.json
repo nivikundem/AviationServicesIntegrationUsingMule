@@ -1,0 +1,154 @@
+{
+	"id": "858d7b38-e5c2-9d3d-5b94-280ee31c66be",
+	"name": "AviationIntegration",
+	"description": "",
+	"order": [
+		"ed2b6189-8530-02b3-439a-08ceb6a7665a",
+		"469951a1-e8f4-7785-9528-2da45b1b35c2",
+		"7d5fa486-0cdb-078e-7ee6-9a2e668a369c",
+		"46919260-e51e-13cf-2f9d-7bdc05d3db1f"
+	],
+	"folders": [],
+	"timestamp": 1500303238064,
+	"owner": "2109488",
+	"public": false,
+	"requests": [
+		{
+			"id": "46919260-e51e-13cf-2f9d-7bdc05d3db1f",
+			"headers": "",
+			"headerData": [],
+			"url": "http://{{host}}:{{port}}/esb/v1-{{env}}/{{basePath}}/aviation/weatherConditionsList?countryCode=ESP",
+			"queryParams": [
+				{
+					"key": "countryCode",
+					"value": "ESP",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1500392593553,
+			"name": "weatherConditionsByCountryCode",
+			"description": "",
+			"collectionId": "858d7b38-e5c2-9d3d-5b94-280ee31c66be",
+			"responses": []
+		},
+		{
+			"id": "469951a1-e8f4-7785-9528-2da45b1b35c2",
+			"headers": "",
+			"headerData": [],
+			"url": " https://v4p4sz5ijk.execute-api.us-east-1.amazonaws.com/anbdata/airports/locations/international-list?api_key=5bea5ca0-6aff-11e7-91af-3588375c714e&format=json",
+			"queryParams": [
+				{
+					"key": "api_key",
+					"value": "5bea5ca0-6aff-11e7-91af-3588375c714e",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "format",
+					"value": "json",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "858d7b38-e5c2-9d3d-5b94-280ee31c66be",
+			"data": null,
+			"dataMode": "params",
+			"name": "InternationalAerodromes",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1500303443387,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "7d5fa486-0cdb-078e-7ee6-9a2e668a369c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://{{host}}:{{port}}/esb/v1-{{env}}/{{basePath}}/aviation/airportsList?countryName=Spain",
+			"queryParams": [
+				{
+					"key": "countryName",
+					"value": "Spain",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "858d7b38-e5c2-9d3d-5b94-280ee31c66be",
+			"data": null,
+			"dataMode": "params",
+			"name": "airportsListByCountryName",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1500390938996,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "ed2b6189-8530-02b3-439a-08ceb6a7665a",
+			"headers": "",
+			"headerData": [],
+			"url": "https://v4p4sz5ijk.execute-api.us-east-1.amazonaws.com/anbdata/airports/weather/current-conditions-list?api_key=5bea5ca0-6aff-11e7-91af-3588375c714e&format=json",
+			"queryParams": [
+				{
+					"key": "api_key",
+					"value": "5bea5ca0-6aff-11e7-91af-3588375c714e",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "format",
+					"value": "json",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "858d7b38-e5c2-9d3d-5b94-280ee31c66be",
+			"data": null,
+			"dataMode": "params",
+			"name": "WeatherConditions",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1500303238063,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}

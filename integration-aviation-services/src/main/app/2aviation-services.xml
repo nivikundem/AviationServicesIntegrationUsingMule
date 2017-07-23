@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:scripting="http://www.mulesoft.org/schema/mule/scripting" xmlns:batch="http://www.mulesoft.org/schema/mule/batch" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata"
+	xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:ws="http://www.mulesoft.org/schema/mule/ws"
+	xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
+http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd
+http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/current/mule-scripting.xsd">
+   
+   
+    <sub-flow name="AirportsList">
+    
+        <http:request config-ref="Aviation_HTTP_Request_Configuration" path="/locations/international-list" method="GET" doc:name="HTTP">
+            <http:request-builder>
+                <http:query-param paramName="api_key" value="${aviation.key}"/>
+                <http:query-param paramName="format" value="json"/>
+            </http:request-builder>
+        </http:request>
+        
+        
+      
+    <!--      <logger message="#[payload]" level="INFO" doc:name="Logger"/>  -->
+     
+      <object-to-string-transformer doc:name="Object to String"/>
+       
+            <json:object-to-json-transformer
+            doc:name="Convert your String to JSON" />
+       <!--   <logger message="#[payload]" level="INFO" doc:name="Logger"/>  -->
+        <dw:transform-message doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+
+  	payload map  {     
+   
+      countryName: $.countryName,
+      countryCode: $.countryCode,
+      airportName: $.airportName,
+      cityName:  $.cityName,
+	  latitude: $.latitude,
+	  longitude: $.longitude,
+	  airportCode: $.airportCode,
+	  geometry: {
+	      type: $.geometry.type,
+	      coordinates :$.geometry.coordinates
+	     
+      }
+  } filter  ($.countryName == flowVars.countryName) orderBy $.airportName
+ 
+]]></dw:set-payload>
+        </dw:transform-message>
+        <!-- <logger message="#[payload]" level="INFO" doc:name="Logger"/> -->
+   
+        
+        <logger message="SendShippingAddressVerification response: [#[message.payloadAs(java.lang.String)]]]" level="INFO" doc:name="SendShippingAddressVerificationRequest response Logger"/>
+    </sub-flow>
+
+
+	
+	
+	    <sub-flow name="WeatherConditionsList">
+    
+        <http:request config-ref="Aviation_HTTP_Request_Configuration" path="/weather/current-conditions-list" method="GET" doc:name="HTTP">
+            <http:request-builder>
+                <http:query-param paramName="api_key" value="${aviation.key}"/>
+                <http:query-param paramName="format" value="json"/>
+            </http:request-builder>
+        </http:request>
+        
+        
+      
+    <!--      <logger message="#[payload]" level="INFO" doc:name="Logger"/>  -->
+     
+      <object-to-string-transformer doc:name="Object to String"/>
+       
+            <json:object-to-json-transformer
+            doc:name="Convert your String to JSON" />
+       <!--   <logger message="#[payload]" level="INFO" doc:name="Logger"/>  -->
+        <dw:transform-message doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+
+  	payload map  {     
+   
+      airport: $.airport,
+      visibility: $.visibility,
+      wind: $.wind,
+      precipitation:  $.precipitation,
+	  freezing: $.freezing,
+	  dangerous: $.dangerous,
+	  VMC_IMC: $.VMC_IMC,
+	  
+	    date: $.date,
+	  airport_name: $.airport_name,
+	    latitude: $.latitude,
+	  longitude: $.longitude,
+	  countryCode: $.countryCode,
+	   raw_metar: $.raw_metar,
+	  datetime: $.datetime
+	  
+	  
+	 
+  } filter  ($.countryCode == flowVars.countryCode) orderBy $.airport_name
+ 
+]]></dw:set-payload>
+        </dw:transform-message>
+        <!-- <logger message="#[payload]" level="INFO" doc:name="Logger"/> -->
+   
+        
+        <logger message="SendShippingAddressVerification response: [#[message.payloadAs(java.lang.String)]]]" level="INFO" doc:name="SendShippingAddressVerificationRequest response Logger"/>
+    </sub-flow>
+
+	
+
+</mule>

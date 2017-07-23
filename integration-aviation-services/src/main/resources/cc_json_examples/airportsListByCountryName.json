@@ -1,0 +1,450 @@
+[
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "A Coruna",
+        "cityName": "A Coruna",
+        "latitude": 43.301944444444445,
+        "longitude": -8.377222222222223,
+        "airportCode": "LECO",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -8.377222222222223,
+                43.301944444444445
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Adolfo Suarez Madrid-Barajas",
+        "cityName": "Madrid",
+        "latitude": 40.47222222222222,
+        "longitude": -3.560833333333333,
+        "airportCode": "LEMD",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -3.560833333333333,
+                40.47222222222222
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Alicante-Elche",
+        "cityName": "Alicante",
+        "latitude": 38.282222222222224,
+        "longitude": -0.5580555555555556,
+        "airportCode": "LEAL",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -0.5580555555555556,
+                38.282222222222224
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Almeria",
+        "cityName": "Almeria",
+        "latitude": 36.84388888888889,
+        "longitude": -2.37,
+        "airportCode": "LEAM",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -2.37,
+                36.84388888888889
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Asturias",
+        "cityName": "Asturias",
+        "latitude": 43.56361111111111,
+        "longitude": -6.034722222222222,
+        "airportCode": "LEAS",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.034722222222222,
+                43.56361111111111
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Bilbao",
+        "cityName": "Bilbao",
+        "latitude": 43.301111111111105,
+        "longitude": -2.9105555555555553,
+        "airportCode": "LEBB",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -2.9105555555555553,
+                43.301111111111105
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Costa del Sol",
+        "cityName": "Malaga",
+        "latitude": 36.675,
+        "longitude": -4.4991666666666665,
+        "airportCode": "LEMG",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -4.4991666666666665,
+                36.675
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Cuatro Vientos",
+        "cityName": "Madrid",
+        "latitude": 40.370555555555555,
+        "longitude": -3.7852777777777775,
+        "airportCode": "LECU",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -3.7852777777777775,
+                40.370555555555555
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "El Prat",
+        "cityName": "Barcelona",
+        "latitude": 41.29694444444444,
+        "longitude": 2.0783333333333336,
+        "airportCode": "LEBL",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.0783333333333336,
+                41.29694444444444
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Federico Garcia Lorca",
+        "cityName": "Granada",
+        "latitude": 37.18861111111111,
+        "longitude": -3.777222222222222,
+        "airportCode": "LEGR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -3.777222222222222,
+                37.18861111111111
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Girona",
+        "cityName": "Girona",
+        "latitude": 41.90083333333333,
+        "longitude": 2.7605555555555554,
+        "airportCode": "LEGE",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.7605555555555554,
+                41.90083333333333
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Ibiza",
+        "cityName": "Ibiza",
+        "latitude": 38.87277777777778,
+        "longitude": 1.3730555555555557,
+        "airportCode": "LEIB",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                1.3730555555555557,
+                38.87277777777778
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Jerez",
+        "cityName": "Jerez",
+        "latitude": 36.74472222222222,
+        "longitude": -6.06,
+        "airportCode": "LEJR",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.06,
+                36.74472222222222
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Manises",
+        "cityName": "Valencia",
+        "latitude": 39.489444444444445,
+        "longitude": -0.4816666666666667,
+        "airportCode": "LEVC",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -0.4816666666666667,
+                39.489444444444445
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Matacan",
+        "cityName": "Salamanca",
+        "latitude": 40.95194444444445,
+        "longitude": -5.501944444444445,
+        "airportCode": "LESA",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -5.501944444444445,
+                40.95194444444445
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Menorca",
+        "cityName": "Menorca",
+        "latitude": 39.862500000000004,
+        "longitude": 4.2186111111111115,
+        "airportCode": "LEMH",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                4.2186111111111115,
+                39.862500000000004
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Palma De Mallorca",
+        "cityName": "Palma De Mallorca",
+        "latitude": 39.55166666666666,
+        "longitude": 2.738888888888889,
+        "airportCode": "LEPA",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.738888888888889,
+                39.55166666666666
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Reus",
+        "cityName": "Reus",
+        "latitude": 41.1475,
+        "longitude": 1.1672222222222224,
+        "airportCode": "LERS",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                1.1672222222222224,
+                41.1475
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Sabadell",
+        "cityName": "Sabadell",
+        "latitude": 41.520833333333336,
+        "longitude": 2.105,
+        "airportCode": "LELL",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.105,
+                41.520833333333336
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "San Javier",
+        "cityName": "Murcia",
+        "latitude": 37.775,
+        "longitude": -0.8125,
+        "airportCode": "LELC",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -0.8125,
+                37.775
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "San Sebastian",
+        "cityName": "San Sebastian",
+        "latitude": 43.35638888888889,
+        "longitude": -1.7905555555555555,
+        "airportCode": "LESO",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -1.7905555555555555,
+                43.35638888888889
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Santiago",
+        "cityName": "Santiago",
+        "latitude": 42.896388888888886,
+        "longitude": -8.415277777777778,
+        "airportCode": "LEST",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -8.415277777777778,
+                42.896388888888886
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Seve Ballesteros-Santander",
+        "cityName": "Santander",
+        "latitude": 43.426944444444445,
+        "longitude": -3.82,
+        "airportCode": "LEXJ",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -3.82,
+                43.426944444444445
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Seville",
+        "cityName": "Seville",
+        "latitude": 37.418055555555554,
+        "longitude": -5.898888888888888,
+        "airportCode": "LEZL",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -5.898888888888888,
+                37.418055555555554
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Vigo",
+        "cityName": "Vigo",
+        "latitude": 42.22916666666667,
+        "longitude": -8.627500000000001,
+        "airportCode": "LEVX",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -8.627500000000001,
+                42.22916666666667
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Villanubla",
+        "cityName": "Valladolid",
+        "latitude": 41.70611111111111,
+        "longitude": -4.851944444444444,
+        "airportCode": "LEVD",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -4.851944444444444,
+                41.70611111111111
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Vitoria",
+        "cityName": "Vitoria",
+        "latitude": 42.882777777777775,
+        "longitude": -2.7244444444444444,
+        "airportCode": "LEVT",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -2.7244444444444444,
+                42.882777777777775
+            ]
+        }
+    },
+    {
+        "countryName": "Spain",
+        "countryCode": "ESP",
+        "airportName": "Zaragoza",
+        "cityName": "Zaragoza",
+        "latitude": 41.66611111111111,
+        "longitude": -1.0416666666666667,
+        "airportCode": "LEZG",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -1.0416666666666667,
+                41.66611111111111
+            ]
+        }
+    }
+]

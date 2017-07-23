@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
+
+    <flow name="GetListOfAerodromes">
+        <http:listener config-ref="Aviation_HTTP_Listener" path="/aviation/airportsList" doc:name="HTTP" allowedMethods="GET">  
+          
+        </http:listener>         
+        <custom-interceptor class="com.aviation.interceptor.Logger" />
+        <set-variable variableName="countryName" value="#[message.inboundProperties.'http.query.params'.countryName]" doc:name="countryNameVariable"/>
+        <logger message="#[flowVars.countryName]" level="INFO" doc:name="Logger"/>     
+        <flow-ref name="AirportsList" doc:name="AirportsList"/> 
+         <exception-strategy ref="Global_Exception_Strategy" doc:name="Reference Exception Strategy" />  
+    </flow>
+    
+    
+     <flow name="GetListOfweatherConditions">
+        <http:listener config-ref="Aviation_HTTP_Listener" path="/aviation/weatherConditionsList" doc:name="HTTP" allowedMethods="GET">  
+          
+        </http:listener>         
+        <custom-interceptor class="com.aviation.interceptor.Logger" />
+        <set-variable variableName="countryCode" value="#[message.inboundProperties.'http.query.params'.countryCode]" doc:name="countryCodeVariable"/>
+     
+        <flow-ref name="WeatherConditionsList" doc:name="WeatherConditionsList"/> 
+         <exception-strategy ref="Global_Exception_Strategy" doc:name="Reference Exception Strategy" />  
+    </flow>
+        
+
+</mule>
